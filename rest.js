@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const axios = require('axios')
 // const jsonld = require('jsonld');
+const octokit = require('@octokit/rest')();
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -58,6 +59,17 @@ app.get('/nimiarkisto', (req, res) => {
             });
         });
     });
+})
+
+
+app.get('/Finto-ehdotus/YSE/issues', (req, res) => {
+    octokit.issues.getForRepo({
+        owner: 'Finto-ehdotus',
+        repo: 'YSE'
+      }).then(({data, headers, status}) => {
+        console.log(data);
+        res.send(data);
+      })
 })
 
 const getLabels = async function(dataDetails) {
