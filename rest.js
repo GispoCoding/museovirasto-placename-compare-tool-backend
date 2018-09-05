@@ -55,7 +55,26 @@ app.get('/mml', (req, res) => {
         }
         else {
             //console.log(result);
-            res.send(result.rows);
+            var rows = [];
+            for (row in result.rows) {
+                var data = {
+                    kirjoitusasu: row.kirjoitusasu,
+                    kielikoodi: row.kielikoodi,
+                    kunta: Museovirasto.MML_codes.kuntakoodi[row.kuntakoodi],
+                    maakunta: Museovirasto.MML_codes.maakuntakoodi[row.maakuntakoodi],
+                    laani: Museovirasto.MML_codes.laanikoodi[row.laanikoodi],
+                    paikkatyyppiryhma: Museovirasto.MML_codes.paikkatyyppiryhmakoodi[row.paikkatyyppiryhmakoodi],
+                    paikkatyyppialaryhma: Museovirasto.MML_codes.paikkatyyppialaryhmakoodi[row.paikkatyyppialaryhmakoodi],
+                    paikkatyyppi: Museovirasto.MML_codes.paikkatyyppikoodi[row.paikkatyyppikoodi],
+                    seutukunta: Museovirasto.MML_codes.seutukuntakoodi[row.seutukuntakoodi],
+                    suuralue: Museovirasto.MML_codes.suuraluekoodi[row.suuraluekoodi],
+                    paikkaid: row.paikkaid,
+                    geom: row.geom
+                }
+                rows.push(data);
+            }
+            res.send(rows);
+            //res.send(result.rows);
         }
         client.end();
     });
