@@ -3,6 +3,7 @@ const app = express()
 const axios = require('axios')
 // const jsonld = require('jsonld');
 const octokit = require('@octokit/rest')();
+var pg = require('pg');
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -10,6 +11,42 @@ app.use(function(req, res, next) {
     next();
   });
   
+app.get('/mml', (req, res) => {
+
+    console.log(req.originalUrl);
+
+    var text = req.query.text;
+
+    var conn_params = {
+        user: "museovirasto",
+        host: "localhost",
+        database: "mml_paikannimet",
+        password: process.env.MUSEOVIRASTO_TOOL_PASS,
+        port: 5434
+    }
+    
+    var client = new pg.Client(conn_params);
+    client.connect();
+    //console.log(client);
+
+    client.query('SELECT kirjoitusasu, kielikoodi, kuntakoodi, maakuntakoodi, laanikoodi, paikkatyyppiryhmakoodi, paikkatyyppialaryhmakoodi, paikkatyyppikoodi, seutukuntakoodi, suuraluekoodi, paikkaid, ST_AsGeoJSON(ST_Transform(wkb_geometry, 4326)) AS geom FROM paikannimi WHERE LOWER(kirjoitusasu) LIKE $1', [text.toLowerCase() + '%'], (error, result) => {
+    //client.query('SELECT * FROM paikannimi WHERE LOWER(kirjoitusasu) LIKE $1', [text.toLowerCase() + '%'], (error, result) => {
+
+
+        if (error != null) {
+            console.log(error);
+            res.send(null);
+        }
+        else {
+            //console.log(result);
+            res.send(result.rows);
+        }
+        client.end();
+    });
+
+
+});
+
 app.get('/paikkatiedot', (req, res) => {
 
     console.log(req.originalUrl);
