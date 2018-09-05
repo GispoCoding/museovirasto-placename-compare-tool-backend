@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:simpleType name="LaaniType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Etelä-Suomi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Södra Finland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Southern Finland</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="2">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Länsi-Suomi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Västra Finland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Western Finland</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="3">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Itä-Suomi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Östra Finland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Eastern Finland</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="4">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Oulu</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Uleåborg</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Oulu</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="5">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Lappi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Lappland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Lapland</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="6">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Ahvenanmaa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Åland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Åland</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

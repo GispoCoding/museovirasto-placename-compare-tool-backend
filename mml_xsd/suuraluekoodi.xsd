@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:simpleType name="SuuralueType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Helsinki-Uusimaa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Helsingfors-Nyland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Helsinki-Uusimaa</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="2">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Etelä-Suomi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Södra Finland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Southern Finland</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="3">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Länsi-Suomi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Västra Finland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Western Finland</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="4">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Pohjois- ja Itä-Suomi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Norra och Östra Finland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Northern and Eastern Finland</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="5">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Ahvenanmaa-Åland</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Åland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Åland</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

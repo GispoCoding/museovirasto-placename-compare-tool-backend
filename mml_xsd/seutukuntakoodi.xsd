@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:simpleType name="SeutukuntaType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="011">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Helsinki</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Helsingfors</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Helsinki</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="014">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Raasepori</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Raseborg</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Raseborg</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="015">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Porvoo</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Borgå</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Porvoo</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="016">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Loviisa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Lovisa</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Loviisa</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="021">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Åboland-Turunmaa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Åboland-Turunmaa</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Åboland-Turunmaa</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="022">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Salo</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Salo</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Salo</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="023">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Turku</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Åbo</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Turku</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="024">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Vakka-Suomi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Nystadsregionen</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Vakka-Suomi</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="025">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Loimaa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Loimaa</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Loimaa</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="041">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Rauma</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Raumo</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Rauma</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="043">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Pori</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Björneborg</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Pori</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="044">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Pohjois-Satakunta</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Norra Satakunta</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Pohjois-Satakunta</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="051">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Hämeenlinna</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Tavastehus</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Hämeenlinna</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="052">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Riihimäki</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Riihimäki</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Riihimäki</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="053">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Forssa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Forssa</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Forssa</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="061">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Luoteis-Pirkanmaa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Nordvästra Birkaland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Luoteis-Pirkanmaa</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="063">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Etelä-Pirkanmaa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Södra Birkaland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Etelä-Pirkanmaa</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="064">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Tampere</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Tammerfors</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Tampere</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="068">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Lounais-Pirkanmaa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Sydvästra Birkaland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Lounais-Pirkanmaa</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="069">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Ylä-Pirkanmaa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Övre Birkaland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Ylä-Pirkanmaa</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="071">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Lahti</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Lahtis</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Lahti</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="081">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kouvola</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Kouvola</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Kouvola</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="082">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kotka-Hamina</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Kotka-Fredrikshamn</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Kotka-Hamina</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="091">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Lappeenranta</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Villmanstrand</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Lappeenranta</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="093">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Imatra</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Imatra</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Imatra</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="101">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Mikkeli</xsd:documentation>
+					<xsd:documentation xml:lang="swe">S:t Michel</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Mikkeli</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="103">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Savonlinna</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Nyslott</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Savonlinna</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="105">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Pieksämäki</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Pieksämäki</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Pieksämäki</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="111">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Ylä-Savo</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Norra Savolax</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Ylä-Savo</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="112">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kuopio</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Kuopio</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Kuopio</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="113">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Koillis-Savo</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Nordöstra Savolax</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Koillis-Savo</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="114">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Varkaus</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Varkaus</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Varkaus</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="115">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Sisä-Savo</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Inre Savolax</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Sisä-Savo</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="122">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Joensuu</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Joensuu</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Joensuu</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="124">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Keski-Karjala</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Mellersta Karelen</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Keski-Karjala</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="125">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Pielisen Karjala</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Pielisen Karjala</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Pielisen Karjala</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="131">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Jyväskylä</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Jyväskylä</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Jyväskylä</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="132">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Joutsa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Joutsa</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Joutsa</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="133">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Keuruu</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Keuruu</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Keuruu</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="134">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Jämsä</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Jämsä</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Jämsä</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="135">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Äänekoski</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Äänekoski</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Äänekoski</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="138">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Saarijärvi-Viitasaari</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Saarijärvi-Viitasaari</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Saarijärvi-Viitasaari</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="141">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Suupohja</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Suupohja</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Suupohja</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="142">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Seinäjoki</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Seinäjoki</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Seinäjoki</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="144">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kuusiokunnat</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Kuusiokunnat</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Kuusiokunnat</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="146">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Järviseutu</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Järviseutu</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Järviseutu</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="151">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kyrönmaa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Kyrönmaa</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Kyrönmaa</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="152">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Vaasa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Vasa</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Vaasa</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="153">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Sydösterbotten</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Sydösterbotten</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Sydösterbotten</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="154">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Jakobstadsregionen</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Jakobstadsregionen</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Jakobstadsregionen</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="161">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kaustinen</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Kaustby</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Kaustinen</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="162">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kokkola</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Karleby</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Kokkola</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="171">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Oulu</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Uleåborg</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Oulu</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="173">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Oulunkaari</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Oulunkaari</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Oulunkaari</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="174">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Raahe</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Brahestad</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Raahe</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="175">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Haapavesi-Siikalatva</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Haapavesi-Siikalatva</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Haapavesi-Siikalatva</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="176">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Nivala-Haapajärvi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Nivala-Haapajärvi</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Nivala-Haapajärvi</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="177">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Ylivieska</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Ylivieska</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Ylivieska</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="178">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Koillismaa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Koillismaa</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Koillismaa</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="181">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kehys-Kainuu</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Kehys-Kainuu</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Kehys-Kainuu</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="182">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kajaani</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Kajana</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Kajaani</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="191">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Rovaniemi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Rovaniemi</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Rovaniemi</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="192">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kemi-Tornio</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Kemi-Torneå</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Kemi-Tornio</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="193">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Torniolaakso</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Tornedalen</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Torniolaakso</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="194">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Itä-Lappi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Östra Lappland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Itä-Lappi</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="196">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Tunturi-Lappi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Tunturi-Lappi</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Tunturi-Lappi</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="197">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Pohjois-Lappi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Norra Lappland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Pohjois-Lappi</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="211">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Mariehamns stad</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Mariehamns stad</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Mariehamns stad</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="212">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Ålands landsbygd</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Ålands landsbygd</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Ålands landsbygd</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="213">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Ålands skärgård</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Ålands skärgård</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Ålands skärgård</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

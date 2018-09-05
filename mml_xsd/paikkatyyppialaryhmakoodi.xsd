@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:simpleType name="PaikkatyyppialaryhmaType">
+		<xsd:restriction base="xsd:integer">
+			<xsd:enumeration value="11">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Maastokohteet</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Terrängobjekt</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Terrain features</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="12">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Vesistökohteet</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Hydrografiska objekt</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Hydrographic features</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="21">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Hallintoalueet ja asutuskohteet</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Administrativa och bebodda enhet</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Administrative units and populated places</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="22">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Muut kulttuurikohteet</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Övriga kulturobjekt</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Other cultural features</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

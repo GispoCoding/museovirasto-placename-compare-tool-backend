@@ -4,6 +4,22 @@ const axios = require('axios')
 // const jsonld = require('jsonld');
 const octokit = require('@octokit/rest')();
 var pg = require('pg');
+var fs = require("fs");
+var parseString = require('xml2js').parseString;
+var util = require('util');
+
+var Museovirasto = {
+    MML_codes : {
+        kuntakoodi: {},
+        maakuntakoodi: {},
+        laanikoodi: {},
+        paikkatyyppiryhmakoodi: {},
+        paikkatyyppialaryhmakoodi: {},
+        paikkatyyppikoodi: {},
+        seutukuntakoodi: {},
+        suuraluekoodi: {},
+    }
+}
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -279,4 +295,31 @@ const getNimiarkistoData = async function(text) {
     return allResults;
 }
 
-app.listen(3000, () => console.log('Listening on port 3000!'))
+var setupMuseovirastoAPI = function() {
+
+    Object.keys(Museovirasto.MML_codes).forEach((key) => {
+
+        (function(codeName){
+            fs.readFile("mml_xsd/" + codeName + ".xsd", "utf8", function(error, data) {
+                parseString(data, (err, result) => {
+                    //console.dir(result);
+                    xsd_enumerations = result['xsd:schema']['xsd:simpleType'][0]['xsd:restriction'][0]['xsd:enumeration'];
+                    //console.dir(xsd_enumerations);
+                    for (var i = 0; i < xsd_enumerations.length; i++) {
+                        var code = parseInt(xsd_enumerations[i]['$']['value']);
+                        //console.log(code);
+                        //console.log(xsd_enumerations[i]['xsd:annotation'][0]['xsd:documentation'][0]['_']);
+                        var value = xsd_enumerations[i]['xsd:annotation'][0]['xsd:documentation'][0]['_'];
+                        Museovirasto.MML_codes[codeName][code] = value;
+                    }
+                    //console.dir( Museovirasto.MML_codes[codeName]);
+                });
+            });
+        })(key);
+    });
+}
+
+setupMuseovirastoAPI();
+
+app.listen(3000, () => console.log('Listening on port 3000!'));
+

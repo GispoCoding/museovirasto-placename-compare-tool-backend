@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:simpleType name="PaikkatyyppiryhmaType">
+		<xsd:restriction base="xsd:integer">
+			<xsd:enumeration value="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Luontokohteet</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Naturobjekt</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Natural features</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="2">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kulttuurikohteet</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Kulturobjekt</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Cultural features</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

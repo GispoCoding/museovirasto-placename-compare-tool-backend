@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:simpleType name="PaikkatyyppiType">
+		<xsd:restriction base="xsd:integer">
+			<xsd:enumeration value="100">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Autotie</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Bilväg</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Road</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="110">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kulkuväylä</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Samfärdsled</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Route</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="120">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Rautatieliikennepaikka</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Järnvägstrafikplats</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Railway traffic site</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="130">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Turvalaite</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Säkerhetsanordning</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Safety device</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="200">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Maa-aineksenottoalue</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Marktäkt</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Mineral resources extraction</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="205">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Hautausmaa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Begravningsplats</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Cemetery</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="210">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kaatopaikka</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Soptipp</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Dumping place</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="215">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Varastoalue</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Lagerområde</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Repository</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="225">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Liikennealue</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Trafikområde</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Traffic area</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="230">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Louhos</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Stenbrott</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Stone-pit</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="235">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Puisto</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Park</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Park</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="240">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Täytemaa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Fyllnadsjord</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Landfill</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="245">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Urheilu- tai virkistysalue</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Sport- eller rekreationsområde</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Sports or recreation area</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="300">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Puu</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Träd</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Tree</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="305">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kivi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Sten</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Boulder</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="310">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Vesikivi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Sten i vatten</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Boulder in water</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="315">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Merkittävä luontokohde</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Betydande naturobjekt</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Significant natural object</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="320">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Pelto tai niitty</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Åker eller äng</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Field or meadow</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="325">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Metsäalue</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Skogsområde</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Forest</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="330">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Suo</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Myr</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Swamp</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="335">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kohouma</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Upphöjning</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Elevation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="340">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Painanne</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Svacka</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Depression</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="345">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Niemi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Udde</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Cape</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="350">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Saari</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Ö eller holme</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Island</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="390">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Muu maastokohde</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Annat terrängobjekt</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Other terrain feature</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="400">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Lähde</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Källa</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Spring</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="410">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Vakavesi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Stillvatten</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Sea, lake or pond</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="415">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Vakaveden osa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Stillvattendel</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Part of sea, lake or pond</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="420">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Virtavesi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Vattendrag</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Watercourse</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="425">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Virtaveden osa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Vattendragsdel</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Part of watercourse</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="430">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Matalikko</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Grund</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Shallows</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="435">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Koski</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Fors</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Rapids</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="490">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Muu vesistökohde</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Annat vattenobjekt</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Other water feature</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="500">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Rakennus</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Byggnad</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Building</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="510">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Rakennus</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Byggnad</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Building</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="520">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Allas</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Bassäng</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Basin</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="530">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Muistomerkki</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Minnesmärke</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Monument</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="540">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kunta, kaupunki</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Kommun, stad</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Municipality, urban area</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="550">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kunta, maaseutu</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Kommun, landsbygd</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Municipality, rural area</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="560">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kylä, kaupunginosa tai kulmakunta</xsd:documentation>
+					<xsd:documentation xml:lang="swe">By, stadsdel eller bebyggelse</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Village, district or neighbourhood</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="570">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Talo</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Hus eller gård</xsd:documentation>
+					<xsd:documentation xml:lang="eng">House</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="575">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Maakunta</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Landskap</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Region</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="580">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Lääni (2009)</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Län (2009)</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Province (2009)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="590">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Muu asutuskohde</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Annat bebyggelseobjekt</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Other populated place</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="600">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Luonnonsuojelualue</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Naturskyddsområde</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Natural protected area</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="602">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Luonnonpuisto</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Naturpark</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Natural park</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="604">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kansallispuisto</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Nationalpark</xsd:documentation>
+					<xsd:documentation xml:lang="eng">National park</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="610">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Suojelukohde</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Skyddsobjekt</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Protected feature</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="612">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Luonnonmuistomerkki</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Naturminnesmärke</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Natural monument</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="614">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Muinaisjäännös</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Fornlämning</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Ancient relic</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="620">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Suojelukohde</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Skyddsobjekt</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Protected feature</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="630">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Erämaa-alue</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Ödemarksområde</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Wilderness area</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="640">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Retkeilyalue</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Utflyktsområde</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Hiking area</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="700">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Valtakunnan rajapyykki</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Riksråröse</xsd:documentation>
+					<xsd:documentation xml:lang="eng">National boundary mark</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="710">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Rajapyykki</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Råröse</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Boundary mark</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="900">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Muu kulttuurikohde</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Annat kulturobjekt</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Other cultural feature</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

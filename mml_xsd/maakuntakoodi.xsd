@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:simpleType name="MaakuntaType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="01">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Uusimaa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Nyland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Uusimaa</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="02">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Varsinais-Suomi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Egentliga Finland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Varsinais-Suomi</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="04">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Satakunta</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Satakunta</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Satakunta</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="05">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kanta-Häme</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Egentliga Tavastland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Kanta-Häme</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="06">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Pirkanmaa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Birkaland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Pirkanmaa</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="07">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Päijät-Häme</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Päijänne-Tavastland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Päijät-Häme</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="08">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kymenlaakso</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Kymmenedalen</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Kymenlaakso</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="09">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Etelä-Karjala</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Södra Karelen</xsd:documentation>
+					<xsd:documentation xml:lang="eng">South Karelia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="10">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Etelä-Savo</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Södra Savolax</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Etelä-Savo</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="11">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Pohjois-Savo</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Norra Savolax</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Pohjois-Savo</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="12">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Pohjois-Karjala</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Norra Karelen</xsd:documentation>
+					<xsd:documentation xml:lang="eng">North Karelia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="13">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Keski-Suomi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Mellersta Finland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Central Finland</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="14">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Etelä-Pohjanmaa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Södra Österbotten</xsd:documentation>
+					<xsd:documentation xml:lang="eng">South Ostrobothnia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="15">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Pohjanmaa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Österbotten</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Ostrobothnia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="16">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Keski-Pohjanmaa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Mellersta Österbotten</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Central Ostrobothnia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="17">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Pohjois-Pohjanmaa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Norra Österbotten</xsd:documentation>
+					<xsd:documentation xml:lang="eng">North Ostrobothnia</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="18">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Kainuu</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Kajanaland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Kainuu</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="19">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Lappi</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Lappland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Lapland</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="21">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fin">Ahvenanmaa</xsd:documentation>
+					<xsd:documentation xml:lang="swe">Åland</xsd:documentation>
+					<xsd:documentation xml:lang="eng">Åland</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>
