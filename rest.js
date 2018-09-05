@@ -45,7 +45,7 @@ app.get('/mml', (req, res) => {
     client.connect();
     //console.log(client);
 
-    client.query('SELECT DISTINCT ON (paikkaid) kirjoitusasu, kielikoodi, kuntakoodi, maakuntakoodi, laanikoodi, paikkatyyppiryhmakoodi, paikkatyyppialaryhmakoodi, paikkatyyppikoodi, seutukuntakoodi, suuraluekoodi, paikkaid, ST_AsGeoJSON(ST_Transform(wkb_geometry, 4326)) AS geom FROM paikannimi WHERE LOWER(kirjoitusasu) LIKE $1', [text.toLowerCase() + '%'], (error, result) => {
+    client.query('SELECT * FROM (SELECT DISTINCT ON (paikkaid) kirjoitusasu, kielikoodi, kuntakoodi, maakuntakoodi, laanikoodi, paikkatyyppiryhmakoodi, paikkatyyppialaryhmakoodi, paikkatyyppikoodi, seutukuntakoodi, suuraluekoodi, paikkaid, ST_AsGeoJSON(ST_Transform(wkb_geometry, 4326)) AS geom FROM paikannimi WHERE LOWER(kirjoitusasu) LIKE $1) place ORDER BY kirjoitusasu ASC', [text.toLowerCase() + '%'], (error, result) => {
     //client.query('SELECT * FROM paikannimi WHERE LOWER(kirjoitusasu) LIKE $1', [text.toLowerCase() + '%'], (error, result) => {
 
 
