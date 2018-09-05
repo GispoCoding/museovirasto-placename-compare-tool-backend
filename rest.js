@@ -45,7 +45,7 @@ app.get('/mml', (req, res) => {
     client.connect();
     //console.log(client);
 
-    client.query('SELECT kirjoitusasu, kielikoodi, kuntakoodi, maakuntakoodi, laanikoodi, paikkatyyppiryhmakoodi, paikkatyyppialaryhmakoodi, paikkatyyppikoodi, seutukuntakoodi, suuraluekoodi, paikkaid, ST_AsGeoJSON(ST_Transform(wkb_geometry, 4326)) AS geom FROM paikannimi WHERE LOWER(kirjoitusasu) LIKE $1', [text.toLowerCase() + '%'], (error, result) => {
+    client.query('SELECT DISTINCT ON (paikkaid) kirjoitusasu, kielikoodi, kuntakoodi, maakuntakoodi, laanikoodi, paikkatyyppiryhmakoodi, paikkatyyppialaryhmakoodi, paikkatyyppikoodi, seutukuntakoodi, suuraluekoodi, paikkaid, ST_AsGeoJSON(ST_Transform(wkb_geometry, 4326)) AS geom FROM paikannimi WHERE LOWER(kirjoitusasu) LIKE $1', [text.toLowerCase() + '%'], (error, result) => {
     //client.query('SELECT * FROM paikannimi WHERE LOWER(kirjoitusasu) LIKE $1', [text.toLowerCase() + '%'], (error, result) => {
 
 
@@ -56,7 +56,9 @@ app.get('/mml', (req, res) => {
         else {
             //console.log(result);
             var rows = [];
-            for (row in result.rows) {
+            for (var i = 0; i < result.rows.length; i++) {
+                var row = result.rows[i];
+                //console.dir(row);
                 var data = {
                     kirjoitusasu: row.kirjoitusasu,
                     kielikoodi: row.kielikoodi,
@@ -69,10 +71,11 @@ app.get('/mml', (req, res) => {
                     seutukunta: Museovirasto.MML_codes.seutukuntakoodi[row.seutukuntakoodi],
                     suuralue: Museovirasto.MML_codes.suuraluekoodi[row.suuraluekoodi],
                     paikkaid: row.paikkaid,
-                    geom: row.geom
+                    geom: JSON.parse(row.geom)
                 }
                 rows.push(data);
             }
+            //console.log(rows);
             res.send(rows);
             //res.send(result.rows);
         }
