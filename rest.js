@@ -136,6 +136,14 @@ app.get('/nimiarkisto', (req, res) => {
     });
 })
 
+app.get('/nimiarkisto/item', (req, res) => {
+    
+    console.log(req.originalUrl);
+
+    getNimiarkistoItemDetails(req.query.itemID).then(dataDetails => {
+        res.send(dataDetails);
+    });
+})
 
 app.get('/Finto-ehdotus/YSE/issues', (req, res) => {
     octokit.issues.getForRepo({
@@ -212,6 +220,29 @@ const getLabels = async function(dataDetails) {
     //console.log("collectWikidataInfo, allEntities", allEntities);
 
     return allEntities;
+}
+
+const getNimiarkistoItemDetails = async function(itemID) {
+    
+    var requestConfig = {
+        baseURL: "https://nimiarkisto.fi/",
+        url: "/w/api.php",
+        method: "get",
+        params: {
+            action: "wbgetentities",
+            ids: itemID,
+            languages: "fi",
+            format: "json"
+        }
+    }
+
+    var wikidataEntitiesResponse = await axios.request(requestConfig);
+
+    var entities = Object.keys(wikidataEntitiesResponse.data.entities).map(function(e) {
+        return wikidataEntitiesResponse.data.entities[e];
+    });
+
+    return entities;
 }
 
 const getNimiarkistoDataDetails = async function(searhResults) {
