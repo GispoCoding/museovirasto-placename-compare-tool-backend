@@ -17,7 +17,7 @@ In Ubuntu 16.04:
 - nvm install 8
 - npm install
 
-In addition, you need to obtain NLS place names from the [NLS open data service](https://www.maanmittauslaitos.fi/en/e-services/open-data-file-download-service), install the data to the PostgreSQL database and modify the DB code in the rest.js accordingly.
+In addition to be able to use the NLS place name functionality, you need to obtain NLS place names from the [NLS open data service](https://www.maanmittauslaitos.fi/en/e-services/open-data-file-download-service), install the data to the PostgreSQL database and modify the DB code in the rest.js accordingly.
 
 ## Run
 
