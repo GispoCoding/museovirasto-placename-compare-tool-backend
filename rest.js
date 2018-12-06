@@ -118,13 +118,13 @@ app.get('/paikkatiedot', (req, res) => {
     });
 });
 
-app.get('/nimiarkisto', (req, res) => {
+app.get('/wikidata', (req, res) => {
 
     console.log(req.originalUrl);
     
-    getNimiarkistoData(req.query.text).then(searhResults => {
-        getNimiarkistoDataDetails(searhResults).then(dataDetails => {
-            getLabels(dataDetails).then(labels => {
+    getWikimediaData("https://www.wikidata.org/", req.query.text).then(searhResults => {
+        getWikimediaDataDetails("https://www.wikidata.org/", searhResults).then(dataDetails => {
+            getWikimediaLabels("https://www.wikidata.org/", dataDetails).then(labels => {
                 var data = {
                     //searhResults: searhResults,
                     dataDetails: dataDetails,
@@ -134,7 +134,26 @@ app.get('/nimiarkisto', (req, res) => {
             });
         });
     });
-})
+});
+
+
+app.get('/nimiarkisto', (req, res) => {
+
+    console.log(req.originalUrl);
+    
+    getWikimediaData("https://nimiarkisto.fi/", req.query.text).then(searhResults => {
+        getWikimediaDataDetails("https://nimiarkisto.fi/", searhResults).then(dataDetails => {
+            getWikimediaLabels("https://nimiarkisto.fi/", dataDetails).then(labels => {
+                var data = {
+                    //searhResults: searhResults,
+                    dataDetails: dataDetails,
+                    labels: labels
+                }
+                res.send(data);
+            });
+        });
+    });
+});
 
 app.get('/nimiarkisto/item', (req, res) => {
     
@@ -143,7 +162,7 @@ app.get('/nimiarkisto/item', (req, res) => {
     getNimiarkistoItemDetails(req.query.itemID).then(dataDetails => {
         res.send(dataDetails);
     });
-})
+});
 
 app.get('/Finto-ehdotus/YSE/issues', (req, res) => {
     octokit.issues.getForRepo({
@@ -153,9 +172,9 @@ app.get('/Finto-ehdotus/YSE/issues', (req, res) => {
         console.log(data);
         res.send(data);
       })
-})
+});
 
-const getLabels = async function(dataDetails) {
+const getWikimediaLabels = async function(baseURL, dataDetails) {
     var allIDs = [];
 
     dataDetails.forEach(dataDetail => {
@@ -164,11 +183,13 @@ const getLabels = async function(dataDetails) {
             return dataDetail.claims[e];
         });
         claims.forEach(claim => {
+            for (var i = 0; i < claim.length; i++) {
             //console.log(claim[0].mainsnak);
-            if (claim[0].mainsnak != undefined && claim[0].mainsnak.property == "P31") {
-                //console.log(claim[0].mainsnak);
-                if (allIDs.indexOf(claim[0].mainsnak.datavalue.value.id) == -1) {
-                    allIDs.push(claim[0].mainsnak.datavalue.value.id);
+                if (claim[i].mainsnak != undefined && claim[i].mainsnak.property == "P31") {
+                    //console.log(claim[0].mainsnak);
+                    if (allIDs.indexOf(claim[i].mainsnak.datavalue.value.id) == -1) {
+                        allIDs.push(claim[i].mainsnak.datavalue.value.id);
+                    }
                 }
             }
         });
@@ -196,14 +217,14 @@ const getLabels = async function(dataDetails) {
         //console.dir(ids);
 
         var requestConfig = {
-            baseURL: "https://nimiarkisto.fi/",
+            baseURL: baseURL,
             url: "/w/api.php",
             method: "get",
             params: {
                 action: "wbgetentities",
                 ids: ids,
                 props: "labels",
-                languages: "fi",
+                languages: "fi|en",
                 format: "json"
             }
         }
@@ -245,7 +266,7 @@ const getNimiarkistoItemDetails = async function(itemID) {
     return entities;
 }
 
-const getNimiarkistoDataDetails = async function(searhResults) {
+const getWikimediaDataDetails = async function(baseURL, searhResults) {
 
     var allIDs = [];
 
@@ -275,13 +296,13 @@ const getNimiarkistoDataDetails = async function(searhResults) {
         //console.dir(ids);
 
         var requestConfig = {
-            baseURL: "https://nimiarkisto.fi/",
+            baseURL: baseURL,
             url: "/w/api.php",
             method: "get",
             params: {
                 action: "wbgetentities",
                 ids: ids,
-                languages: "fi",
+                languages: "fi|en",
                 format: "json"
             }
         }
@@ -300,7 +321,7 @@ const getNimiarkistoDataDetails = async function(searhResults) {
     return allEntities;
 }
 
-const getNimiarkistoData = async function(text) {
+const getWikimediaData = async function(baseURL, text) {
     
     const limit = 50;
     var cont = 0;
@@ -310,7 +331,7 @@ const getNimiarkistoData = async function(text) {
     while (moreData) {
 
         var requestConfig = {
-            baseURL: "https://nimiarkisto.fi/",
+            baseURL: baseURL,
             url: "/w/api.php",
             method: "get",
             params: {
