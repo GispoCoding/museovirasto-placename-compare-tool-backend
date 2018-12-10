@@ -328,7 +328,7 @@ const getWikimediaData = async function(baseURL, text) {
     var allResults = []; 
     var moreData = true;
 
-    while (moreData && allResults.length <= 1500) {
+    while (moreData && allResults.length <= 1000) {
 
         var requestConfig = {
             baseURL: baseURL,
