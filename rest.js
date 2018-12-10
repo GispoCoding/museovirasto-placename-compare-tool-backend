@@ -38,7 +38,7 @@ app.get('/mml', (req, res) => {
         host: "localhost",
         database: "mml_paikannimet",
         password: process.env.MUSEOVIRASTO_TOOL_PASS,
-        port: 5434
+        port: 5432
     }
     
     var client = new pg.Client(conn_params);
@@ -328,7 +328,7 @@ const getWikimediaData = async function(baseURL, text) {
     var allResults = []; 
     var moreData = true;
 
-    while (moreData) {
+    while (moreData && allResults.length <= 1500) {
 
         var requestConfig = {
             baseURL: baseURL,
